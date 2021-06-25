@@ -1,4 +1,4 @@
-class ReviewService {
+class ReviewService{
     constructor(endpoint) {
         this.endpoint = endpoint
     }
@@ -8,9 +8,10 @@ class ReviewService {
         fetch(`${this.endpoint}/reviews`)
         .then(resp => resp.json())
         .then(reviews => {
+            //For each review of Reviews array
             for (const review of reviews){
                 const c = new Review(review)
-                c.putOnDom
+                c.putOnDom()
             }
         })
     }

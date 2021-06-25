@@ -10,7 +10,7 @@ class House {
         this.img_url = img_url;
         this.reviews = []
 
-        this.element = document.createElement('li')
+        this.element = document.createElement("p")
 
         House.all.push(this)
 
@@ -21,6 +21,7 @@ class House {
         for (let r of reviews) {
             this.reviews.push(new Review(r.user_id, r.text))
         }
+        console.log(this.reviews)
     }
 
     houseHTML(){

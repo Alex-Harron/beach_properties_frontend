@@ -28,4 +28,16 @@ class User {
     placeOnDom(){
         User.usersContainer.append(this.userHTML())
     }
+
+    static renderUserForm(){
+        User.userForm.innerHTML += `
+        <form id="new-user-form">
+            Username: <input type="text" id="username">
+            Email: <input type="text" id="email">
+            Password: <input type="text" id="password">
+            <input type="submit" id="Sign Up">
+        <form>
+        `
+    }
+
 }

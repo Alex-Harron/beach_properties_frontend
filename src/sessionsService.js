@@ -15,4 +15,27 @@ class SessionsService {
             }
         })
     }
+
+    createUser(){
+
+        const user = {
+            username: document.getElementById('username').value,
+            email: document.getElementById('email').value,
+            password: document.getElementById('password').value
+        }
+
+        const configObj = {
+            method: "POST",
+            header: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        }
+
+        fetch(`${this.endpoint}/users`, configObj)
+        .then(resp => resp.json())
+        .then(user => {
+            console.log(user)
+        })
+    }
 }

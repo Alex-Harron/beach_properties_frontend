@@ -7,12 +7,12 @@ class HouseService {
     getHouses(){
         fetch(`${this.endpoint}/houses`)
         .then(resp => resp.json())
-        .then(houses => {
+        .then((houses) => {
             for (const house of houses){
-                const c = new House(house)
-                c.onDom()
+                const h = new House(house)
+                h.addReviews()
+                h.onDom()
             }
         })
     }
-
 }

@@ -1,30 +1,44 @@
 class Review {
     //remembering objects 
     static all = []
-    static reviewsContainer = document.getElementById("reviews-container")
+    static reviewsContainer = document.getElementById("houses-container")
     static reviewForm = document.getElementById("form-container")
 
-    constructor({user_id, house_id, text}){
+    constructor({id, user_id, house_id, text}){
+        this.id = id;
         this.user_id = user_id;
         this.house_id = house_id;
         this.text = text;
 
         this.node = document.createElement('li')
+        this.node.id = `review-${this.id}`
+        this.node.addEventListener('click', this.handleClick)
         
         Review.all.push(this)
     }
 
     reviewHTML(){
         this.node.innerHTML += `
-            <div>
-                <h3>${this.text}</h3>
-                <p>${this.house_id} - ${this.user_id}</p>
-            </div>
+
+        <h3>${this.user_id}</h3>
+        <h6 class="w3-opacity">From $99</h6>
+        <p>${this.text}</p>
         `
         return this.node;
 
     }
     putOnDom(){
         Review.reviewsContainer.append(this.reviewHTML())
+    }
+
+    static renderForm(){
+        Review.reviewForm.innerHTML += `
+        <form id="new-review-form">
+            House_id: <input type="integer" id="house_id">
+            User_id: <input type="integer" id="user_id">
+            Text: <input type="text" id="text">
+            <input type="submit" id="create">
+        <form>
+        `
     }
 }

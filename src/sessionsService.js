@@ -11,7 +11,6 @@ class SessionsService {
             //For each user of Users array
             for (const user of users){
                 const c = new User(user)
-                c.placeOnDom()
             }
         })
     }

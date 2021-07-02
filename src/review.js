@@ -4,9 +4,8 @@ class Review {
     static reviewsContainer = document.getElementById("reviews-container")
     static reviewForm = document.getElementById("form-container")
 
-    constructor({id, user_id, house_id, text }){
+    constructor({text, house_id, id}){
         this.id = id;
-        this.user_id = user_id;
         this.house_id = house_id;
         this.text = text;
 
@@ -20,7 +19,7 @@ class Review {
     reviewHTML(){
         this.node.innerHTML += `
 
-        <h3>${this.user_id}</h3>
+        <h3>${this.house_id}</h3>
         <p>${this.text}</p>
         `
         return this.node;

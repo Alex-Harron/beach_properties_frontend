@@ -11,15 +11,14 @@ class ReviewService{
             //For each review of Reviews array
             for (const review of reviews){
                 const c = new Review(review)
-                c.putOnDom()
             }
         })
     }
 
-    createReview(){
+    createReview(house_id){
 
         const review = {
-            user_id: document.getElementById('user_id').value,
+            user_id: 1,
             house_id: document.getElementById('house_id').value,
             text: document.getElementById('text').value
         }
@@ -36,8 +35,19 @@ class ReviewService{
         .then(resp => resp.json())
         .then(review => {
             const r = new Review(review)
-            r.putOnDom()
+            r.putOnDom
         })
+    }
+
+    renderForm(){
+        Review.reviewForm.innerHTML += `
+        <form id="new-review-form">
+            House_id: <input type="integer" id="house_id">
+            User_id: <input type="integer" id="user_id">
+            Text: <input type="text" id="text">
+            <input type="submit" id="create">
+        <form>
+        `
     }
 
 }

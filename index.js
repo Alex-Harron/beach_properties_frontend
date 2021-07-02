@@ -8,7 +8,7 @@ houseService.getHouses()
 sessionsService.getUsers()
 
 Review.reviewForm.addEventListener('submit', handleSubmit)
-Review.renderForm()
+
 
 
 

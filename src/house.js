@@ -3,6 +3,7 @@ class House {
 
     static all = []
     static housesContainer = document.getElementById("houses-container")
+    
 
     constructor({id, name, description, img_url}) {
         this.id = id;
@@ -12,6 +13,7 @@ class House {
         this.reviews = []
 
         this.element = document.createElement("p")
+        this.element.id = `house-${this.id}`
 
         House.all.push(this)
 
@@ -19,11 +21,11 @@ class House {
     }
 
     addReviews() {
-        let houseReviews = Review.all.filter(r => {
-            return r.house_id === this.id;
+        let allReviews = Review.all.filter(r => {
+            return r.house_id === this.id
         })
-        this.reviews.push(houseReviews);
-        console.log(this.reviews)
+        this.reviews.push(allReviews)
+        return this.reviews
     }
     
 

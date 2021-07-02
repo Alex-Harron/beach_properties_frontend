@@ -2,7 +2,6 @@ const base_url = "http://localhost:3000"
 const reviewService = new ReviewService(base_url)
 const houseService = new HouseService(base_url)
 const sessionsService = new SessionsService(base_url)
-const allReviews = Review.all
 
 reviewService.getReviews()
 houseService.getHouses()
@@ -13,10 +12,10 @@ Review.renderForm()
 
 
 
-function handleSubmit(){
-    event.preventDefault()
+function handleSubmit(e){
+    e.preventDefault()
     reviewService.createReview()
-    event.target.reset()
+    e.target.reset()
 }
 
 

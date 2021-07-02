@@ -1,10 +1,10 @@
 class Review {
     //remembering objects 
     static all = []
-    static reviewsContainer = document.getElementById("houses-container")
+    static reviewsContainer = document.getElementById("reviews-container")
     static reviewForm = document.getElementById("form-container")
 
-    constructor({id, user_id, house_id, text}){
+    constructor({id, user_id, house_id, text }){
         this.id = id;
         this.user_id = user_id;
         this.house_id = house_id;
@@ -21,7 +21,6 @@ class Review {
         this.node.innerHTML += `
 
         <h3>${this.user_id}</h3>
-        <h6 class="w3-opacity">From $99</h6>
         <p>${this.text}</p>
         `
         return this.node;

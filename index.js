@@ -3,12 +3,12 @@ const reviewService = new ReviewService(base_url)
 const houseService = new HouseService(base_url)
 const sessionsService = new SessionsService(base_url)
 
-reviewService.getReviews()
+
 houseService.getHouses()
+reviewService.getReviews()
 sessionsService.getUsers()
 
 Review.reviewForm.addEventListener('submit', handleSubmit)
-
 
 
 

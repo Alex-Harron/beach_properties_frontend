@@ -9,12 +9,13 @@ class Review {
         this.house_id = house_id;
         this.text = text;
 
-        this.node = document.createElement('li')
+        this.node = document.createElement('ul')
         this.node.id = `review-${this.id}`
         this.node.addEventListener('click', this.handleClick)
         
         Review.all.push(this)
     }
+
     
     reviewHTML(){
         this.node.innerHTML += `
@@ -32,7 +33,7 @@ class Review {
     static renderForm(){
         Review.reviewForm.innerHTML += `
         <form id="new-review-form">
-            House_id: <input type="integer" id="house_id">
+            House_id: <input type="integer" id="house_id" value=${this.house_id}>
             User_id: <input type="integer" id="user_id">
             Text: <input type="text" id="text">
             <input type="submit" id="create">

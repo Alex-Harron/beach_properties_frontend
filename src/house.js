@@ -30,19 +30,15 @@ class House {
 
     houseHTML(){
         this.element.innerHTML += `
-            <div class="w3-row-padding w3-padding-16">
-                <div class="w3-third w3-margin-bottom">
+        <center><div class="w3-container w3-white">
                     <img src="${this.img_url}" style="width:100%;">
-                    <div class="w3-container w3-white">
                         <h3>${this.name}</h3>
-                        <h6 class="w3-opacity">From $99</h6>
+                        <h6 class="w3-opacity">All Reviews</h6>
                         <li>${this.reviews}</li>
                         <p>15m<sup>2</sup></p>
                         <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i></p>
                         <button class="w3-button w3-block w3-black w3-margin-bottom">Review</button>
-                    </div>
-                </div>
-            </div>
+            </div></center>
             `
         return this.element
     }

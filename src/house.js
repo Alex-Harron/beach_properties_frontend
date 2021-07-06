@@ -51,7 +51,7 @@ class House {
 
     handleClick = () => {
         if (event.target.innerText === 'Review'){
-            reviewService.renderForm()
+            Review.renderForm()
         }
     }
 }

@@ -10,7 +10,7 @@ class HouseService {
         .then((houses) => {
             for (const house of houses){
                 const h = new House(house)
-                h.addReviews()
+                h.getReviews()
                 h.onDom()
             }
         })

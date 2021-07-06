@@ -15,8 +15,7 @@ class ReviewService{
         })
     }
 
-    createReview(house_id){
-
+    createReview(){
         const review = {
             user_id: 1,
             house_id: document.getElementById('house_id').value,
@@ -37,17 +36,6 @@ class ReviewService{
             const r = new Review(review)
             r.putOnDom
         })
-    }
-
-    renderForm(){
-        Review.reviewForm.innerHTML += `
-        <form id="new-review-form">
-            House_id: <input type="integer" id="house_id">
-            User_id: <input type="integer" id="user_id">
-            Text: <input type="text" id="text">
-            <input type="submit" id="create">
-        <form>
-        `
     }
 
 }

@@ -12,25 +12,20 @@ class House {
         this.img_url = img_url;
         this.reviews = []
 
-
         this.element = document.createElement("p")
         this.element.id = `house-${this.id}`
         this.element.addEventListener('click', this.handleClick)
 
 
         House.all.push(this)
-
-
-    }
-
-    addReviews() {
-        let allReviews = Review.all.filter(r => {
-            return r.house_id === this.id
-        })
-        this.reviews.push(allReviews)
     }
     
-
+    getReviews(){
+        let houseReviews = Review.all.filter(r => {
+            return r.house_id === this.id
+        })
+        this.reviews.push(houseReviews)
+    }
 
     houseHTML(){
         this.element.innerHTML += `

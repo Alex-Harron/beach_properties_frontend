@@ -17,7 +17,7 @@ class Review {
     }
     
     reviewHTML(){
-        this.element.innerHTML += `
+        this.node.innerHTML += `
 
         <h3>${this.house_id}</h3>
         <p>${this.text}</p>

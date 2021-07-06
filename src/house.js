@@ -21,10 +21,11 @@ class House {
     }
     
     getReviews(){
-        let houseReviews = Review.all.filter(r => {
-            return r.house_id === this.id
+        Review.all.filter(r => {
+            if(r.house_id === this.id){
+                this.reviews.push(r.text)
+            }
         })
-        this.reviews.push(houseReviews)
     }
 
     houseHTML(){
@@ -35,7 +36,7 @@ class House {
                     <div class="w3-container w3-white">
                         <h3>${this.name}</h3>
                         <h6 class="w3-opacity">From $99</h6>
-                        <p>${JSON.stringify(this.reviews)}</p>
+                        <li>${this.reviews}</li>
                         <p>15m<sup>2</sup></p>
                         <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i></p>
                         <button class="w3-button w3-block w3-black w3-margin-bottom">Review</button>

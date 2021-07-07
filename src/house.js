@@ -2,8 +2,9 @@
 class House {
 
     static all = []
-    static housesContainer = document.getElementById("houses-container")
-    
+    static house1Container = document.getElementById("house1-container")
+    static house2Container = document.getElementById("house2-container")
+    static house3Container = document.getElementById("house3-container")
 
     constructor({id, name, description, img_url}) {
         this.id = id;
@@ -28,26 +29,47 @@ class House {
         })
     }
 
-    houseHTML(){
+    house1HTML(){
+        if(this.id === 11){
         this.element.innerHTML += `
-        <center><div class="w3-container w3-white">
-                    <img src="${this.img_url}" style="width:100%;">
-                        <h3>${this.name}</h3>
-                        <h6 class="w3-opacity">All Reviews</h6>
-                        <li>${this.reviews}</li>
-                        <p>15m<sup>2</sup></p>
-                        <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i></p>
-                        <button class="w3-button w3-block w3-black w3-margin-bottom">Review</button>
-            </div></center>
+            <img src=${this.img_url} style="width:100%">
+            <div class="w3-container w3-white">
+                <h3>${this.name}</h3>
+                <h6 class="w3-opacity">From $99</h6>
+                <p>${this.description}</p>
+                <p>15m<sup>2</sup></p>
+                <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i></p>
+                <button class="w3-button w3-block w3-black w3-margin-bottom">Review</button>
+            </div>
+        `
+        return this.element
+        }
+    }
+    house2HTML(){
+        if(this.id === 12){
+            this.element.innerHTML += `
+            <img src=${this.img_url} style="width:100%">
+                <div class="w3-container w3-white">
+                    <h3>${this.name}</h3>
+                    <h6 class="w3-opacity">From $149</h6>
+                    <p>${this.description}</p>
+                    <p>${this.reviews}</p>
+                    <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i></p>
+                    <button class="w3-button w3-block w3-black w3-margin-bottom">Review</button>
+                </div>
             `
         return this.element
+        }
     }
-    onDom(){
-        House.housesContainer.append(this.houseHTML())
+    onDom1(){
+        House.house1Container.append(this.house1HTML())
+    }
+    onDom2(){
+        House.house2Container.append(this.house2HTML())
     }
 
-    handleClick = () => {
-        if (event.target.innerText === 'Review'){
+    handleClick = (e) => {
+        if (e.target.innerText === 'Review'){
             Review.renderForm()
         }
     }

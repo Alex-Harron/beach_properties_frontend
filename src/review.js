@@ -2,7 +2,7 @@ class Review {
     //remembering objects 
     static all = []
     static reviewsContainer = document.getElementById("reviews-container")
-    static reviewForm = document.getElementById("form-container")
+    static reviewForm = document.getElementById("house1-container")
 
     constructor({text, house_id, id}){
         this.id = id;
@@ -33,7 +33,7 @@ class Review {
     static renderForm(){
         Review.reviewForm.innerHTML += `
         <form id="new-review-form">
-            House_id: <input type="integer" id="house_id" value=${this.house_id}>
+            House_id: <input type="integer" id="house_id">
             User_id: <input type="integer" id="user_id">
             Text: <input type="text" id="text">
             <input type="submit" id="create">

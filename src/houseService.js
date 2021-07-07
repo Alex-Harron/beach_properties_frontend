@@ -11,7 +11,8 @@ class HouseService {
             for (const house of houses){
                 const h = new House(house)
                 h.getReviews()
-                h.onDom()
+                h.onDom1()
+                h.onDom2()
             }
         })
     }

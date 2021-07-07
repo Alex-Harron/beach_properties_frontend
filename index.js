@@ -5,7 +5,6 @@ const sessionsService = new SessionsService(base_url)
 
 
 houseService.getHouses()
-reviewService.getReviews()
 sessionsService.getUsers()
 
 Review.reviewForm.addEventListener('submit', handleSubmit)

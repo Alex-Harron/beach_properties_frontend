@@ -11,12 +11,18 @@ sessionsService.getUsers()
 Review.reviewForm.addEventListener('submit', handleSubmit)
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("The DOM loaded!")
+});
 
 function handleSubmit(e){
     e.preventDefault()
     reviewService.createReview()
     e.target.reset()
 }
+
+
+
 
 
 

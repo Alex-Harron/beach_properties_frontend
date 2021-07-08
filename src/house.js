@@ -36,9 +36,8 @@ class House {
                 <h6 class="w3-opacity">From $99</h6>
                 <p>${this.description}</p>
                 <p>${this.reviews}</p>
-                <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i></p>
-                <button class="w3-button w3-block w3-black w3-margin-bottom">Review</button>
-            </div>
+                <a href="#new-review-form" class="w3-button w3-block w3-black w3-margin-bottom">Review</a>
+                </div>
         `
         return this.element
     }
@@ -51,8 +50,7 @@ class House {
                     <h6 class="w3-opacity">From $149</h6>
                     <p>${this.description}</p>
                     <p>${this.reviews}</p>
-                    <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i></p>
-                    <button class="w3-button w3-block w3-black w3-margin-bottom">Review</button>
+                    <a href="#new-review-form" class="w3-button w3-block w3-black w3-margin-bottom">Review</a>
                 </div>
             `
         return this.element
@@ -65,8 +63,7 @@ class House {
                     <h6 class="w3-opacity">From $199</h6>
                     <p>${this.description}</p>
                     <p>${this.reviews}</p>
-                    <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i> <i class="fa fa-glass"></i> <i class="fa fa-cutlery"></i></p>
-                    <button class="w3-button w3-block w3-black w3-margin-bottom">Review</button>
+                    <a href="#new-review-form" class="w3-button w3-block w3-black w3-margin-bottom">Review</a>
                 </div>
             `
         return this.element

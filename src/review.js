@@ -1,11 +1,11 @@
-class Review {
+class Review extends House{
     //remembering objects 
     static all = []
     static reviewsContainer = document.getElementById("reviews-container")
-    static reviewForm = document.getElementById("reviews-container")
+    static reviewForm = document.getElementById("form-container")
 
     constructor({text, house_id, id}){
-        this.id = id;
+        super(id);
         this.house_id = house_id;
         this.text = text;
 
@@ -32,10 +32,12 @@ class Review {
 
     static renderForm(){
         Review.reviewForm.innerHTML += `
+        <h3> Write a Review: </h3>
         <form id="new-review-form">
-            House_id: <input type="integer" id="house_id">
-            Text: <input type="text" id="text">
-            <input type="submit" id="create">
+            House_id: <input class="w3-input w3-padding-16 w3-border" type="integer" placeholder="house_id" id="house_id">
+            Text: <input class="w3-input w3-padding-16 w3-border" input type="text" placeholder="Your Review" id="text">
+            <br>
+            <button class="w3-button w3-black w3-padding-large" type="submit">Post Review</button></p>
         <form>
         `
     }

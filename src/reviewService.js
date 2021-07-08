@@ -35,6 +35,7 @@ class ReviewService{
         .then(resp => resp.json())
         .then(review => {
             const r = new Review(review)
+            r.putOnDom()
         })
     }
 }

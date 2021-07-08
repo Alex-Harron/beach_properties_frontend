@@ -19,14 +19,6 @@ class House {
 
         House.all.push(this)
     }
-    
-    addReviews(){
-        Review.all.filter(r => {
-            if(r.house_id === this.id){
-                Review.putOnDom()
-            }
-        })
-    }
 
     houseHTML(){
         this.element.innerHTML += `

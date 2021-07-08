@@ -1,7 +1,9 @@
 class Review {
     //remembering objects 
     static all = []
-    static reviewsContainer = document.getElementById("house1-reviews")
+    static house1Reviews = document.getElementById("house1-reviews")
+    static house2Reviews = document.getElementById("house2-reviews")
+    static house3Reviews = document.getElementById("house3-reviews")
     static reviewForm = document.getElementById("form-container")
 
     constructor({text, house_id, id}){
@@ -24,9 +26,19 @@ class Review {
         return this.node;
 
     }
-    putOnDom(){
+    putOnDom1(){
         if(this.house_id === 16)
-        Review.reviewsContainer.append(this.reviewHTML())
+        Review.house1Reviews.append(this.reviewHTML())
+    }
+
+    putOnDom2(){
+        if(this.house_id === 17)
+        Review.house2Reviews.append(this.reviewHTML())
+    }
+
+    putOnDom3(){
+        if(this.house_id === 18)
+        Review.house3Reviews.append(this.reviewHTML())
     }
 
     static renderForm(){

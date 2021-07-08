@@ -11,7 +11,9 @@ class ReviewService{
             //For each review of Reviews array
             for (const review of reviews){
                 const c = new Review(review)
-                c.putOnDom()
+                c.putOnDom1()
+                c.putOnDom2()
+                c.putOnDom3()
             }
         })
     }
@@ -36,7 +38,9 @@ class ReviewService{
         .then(resp => resp.json())
         .then(review => {
             const r = new Review(review)
-            r.putOnDom()
+            r.putOnDom1()
+            r.putOnDom2()
+            r.putOnDom3()
         })
     }
 }

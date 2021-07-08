@@ -11,48 +11,53 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 </style>
 <body class="w3-light-grey">
 
-<!-- Navigation Bar -->
 <div class="w3-bar w3-white w3-large">
-  <a href="#" class="w3-bar-item w3-button w3-light-blue w3-mobile"><i class="fa w3-margin-right"><img src="https://freepngimg.com/thumb/diamond/28497-6-diamond-logo.png" style="width:25px;height:30px;"></i>Sea-Breeze Realty</a>
+  <a class="w3-bar-item w3-light-blue w3-mobile"><i class="fa w3-margin-right"><img src="https://static.vecteezy.com/system/resources/previews/001/189/405/original/palm-tree-png.png" style="width:25px;height:30px;"></i>Sea-Breeze Realty</a>
   <a href="#houses" class="w3-bar-item w3-button w3-mobile">Houses</a>
   <a href="#about" class="w3-bar-item w3-button w3-mobile">About</a>
   <a href="#more-houses" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile">See More</a>
 </div>
 
 <header class="w3-display-container w3-content" style="max-width:1500px;">
-  <img class="w3-image" src="https://www.quamproperties.com/wp-content/uploads/2018/07/banner-ocean-front.jpg" style="min-width:1000px" width=100%>
+  <center><img class="w3-image" src="https://ap.rdcpix.com/1065519712/2577ef7b2f29055f38a09600f075cf09g-c0od-w1024_h768_q100.jpg" style="min-width:800px" width=50%></center>
 </header>
 
-<!-- Page content -->
-<div class="w3-content" style="max-width:1532px;">
+<div class="w3-container w3-padding-12 w3-black w3-card" style="margin:32px 0;">
+</div>
 
+<div class="w3-content" style="max-width:1532px;">
   <div class="w3-container w3-margin-top" id="houses">
     <h3>All Avalible Houses</h3>
     <p>Make yourself at home is our slogan. We offer the best beach side Houses on the market.</p>
   </div>
   
   <div class="w3-row-padding">
-  <div class="w3-row-padding w3-padding-16">
-    <div class="w3-third w3-margin-bottom">
-      <div class="w3-container w3-white">
-        <div id="house1-container">
+    <div class="w3-row-padding w3-padding-16">
+      <div class="w3-third w3-margin-bottom">
+        <div class="w3-container w3-white">
+          <div id="house1-container">
+          </div>
+          <div id="house1-reviews"></div>
         </div>
-        <div id="house1-reviews"></div>
+      </div>
+      <div class="w3-third w3-margin-bottom">
+        <div class="w3-container w3-white">
+          <div id="house2-container"></div>
+          <div id="house2-reviews"></div>
+        </div>
+      </div>
+      <div class="w3-third w3-margin-bottom">
+        <div class="w3-container w3-white">
+          <div id="house3-container">
+          </div>
+          <div id="house3-reviews"></div>
+        </div>
       </div>
     </div>
-    <div class="w3-third w3-margin-bottom">
-      <div class="w3-container w3-white">
-      <div id="house2-container"></div>
-      </div>
-      <div id="house2-reviews"></div>
-      </div>
-    <div class="w3-third w3-margin-bottom">
-      <div class="w3-container w3-white">
-      <div id="house3-container">
-      </div>
-      <div id="house3-reviews"></div>
-    </div>
-    </div>
+  </div>
+
+  <div class="w3-container w3-padding-12 w3-black w3-card" style="margin:32px 0;">
+    <div id="form-container">
     </div>
   </div>
 
@@ -62,7 +67,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
       <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h6>
     </div>
     <div class="w3-col l8 12">
-      <!-- Image of location/map -->
       <img src="https://cdn.mos.cms.futurecdn.net/wtqqnkYDYi2ifsWZVW2MT4-1200-80.jpg" class="w3-image w3-greyscale" style="width:100%;">
     </div>
   </div>
@@ -72,15 +76,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
   </div>
 
   <div class="w3-container w3-padding-12 w3-black w3-card" style="margin:32px 0;">
-    <div id="form-container">
-    </div>
   </div>
 
   <div class="w3-container" id="more-houses">
     <h3>Our Houses</h3>
     <h6>We are sure you can find a house that is perfect for your vacation:</h6>
   </div>
-  
   <div class="w3-row-padding w3-padding-16 w3-text-white w3-large">
     <div class="w3-half w3-margin-bottom">
       <div class="w3-display-container">
@@ -119,18 +120,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
       </div>
     </div>
   </div>
-
-
-<!-- End page content -->
 </div>
 
-  
   <script src="src/house.js"></script>
   <script src="src/review.js"></script>
   <script src="src/houseService.js"></script>
   <script src="src/reviewService.js"></script>
   <script src="index.js"></script>
-
 
 </body>
 </html>

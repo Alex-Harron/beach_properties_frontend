@@ -23,69 +23,40 @@ class House {
     addReviews(){
         Review.all.filter(r => {
             if(r.house_id === this.id){
-                this.reviews.push(r.text)
+                Review.putOnDom()
             }
         })
     }
 
-    house1HTML(){
+    houseHTML(){
         this.element.innerHTML += `
             <img src=${this.img_url} style="width:100%">
-            <div class="w3-container w3-white">
-                <h3>${this.name}</h3>
+                <h3>Id: ${this.id} - ${this.name}</h3>
                 <h6 class="w3-opacity">From $99</h6>
                 <p>${this.description}</p>
-                <p>${this.reviews}</p>
-                <a href="#new-review-form" class="w3-button w3-block w3-black w3-margin-bottom">Review</a>
-                </div>
+                <a href="#new-review-form" class="w3-button w3-block w3-black w3-margin-bottom">Review this House</a>
+                <h3>${this.name} Reviews: </h3>
         `
-        return this.element
-    }
-    house2HTML(){
-
-            this.element.innerHTML += `
-            <img src=${this.img_url} style="width:100%">
-                <div class="w3-container w3-white">
-                    <h3>${this.name}</h3>
-                    <h6 class="w3-opacity">From $149</h6>
-                    <p>${this.description}</p>
-                    <p>${this.reviews}</p>
-                    <a href="#new-review-form" class="w3-button w3-block w3-black w3-margin-bottom">Review</a>
-                </div>
-            `
-        return this.element
-    }
-    house3HTML(){
-            this.element.innerHTML += `
-            <img src=${this.img_url} style="width:100%">
-                <div class="w3-container w3-white">
-                    <h3>${this.name}</h3>
-                    <h6 class="w3-opacity">From $199</h6>
-                    <p>${this.description}</p>
-                    <p>${this.reviews}</p>
-                    <a href="#new-review-form" class="w3-button w3-block w3-black w3-margin-bottom">Review</a>
-                </div>
-            `
         return this.element
     }
     onDom1(){
         if(this.id === 16){
-        House.house1Container.append(this.house1HTML())
+        House.house1Container.append(this.houseHTML())
         }
     }
     onDom2(){
         if(this.id === 17){
-        House.house2Container.append(this.house2HTML())
+        House.house2Container.append(this.houseHTML())
         }
     }
     onDom3(){
         if(this.id === 18){
-        House.house3Container.append(this.house3HTML())
+        House.house3Container.append(this.houseHTML())
         }
     }
 
     handleClick = (e) => {
-        if (e.target.innerText === 'Review'){
+        if (e.target.innerText === 'Review this House'){
             Review.renderForm()
         }
     }

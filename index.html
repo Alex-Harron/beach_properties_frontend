@@ -34,15 +34,25 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
   <div class="w3-row-padding">
   <div class="w3-row-padding w3-padding-16">
     <div class="w3-third w3-margin-bottom">
-      <div id="house1-container">
+      <div class="w3-container w3-white">
+        <div id="house1-container">
+        </div>
+        <div id="house1-reviews"></div>
       </div>
     </div>
     <div class="w3-third w3-margin-bottom">
+      <div class="w3-container w3-white">
       <div id="house2-container"></div>
       </div>
+      <div id="house2-reviews"></div>
+      </div>
     <div class="w3-third w3-margin-bottom">
+      <div class="w3-container w3-white">
       <div id="house3-container">
       </div>
+      <div id="house3-reviews"></div>
+    </div>
+    </div>
     </div>
   </div>
 
@@ -59,6 +69,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
   
   <div class="w3-panel w3-light-blue w3-leftbar w3-padding-32">
     <h6><i class="fa fa-info w3-light-grey w3-padding w3-margin-right"></i> Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h6>
+  </div>
+
+  <div class="w3-container w3-padding-12 w3-black w3-card" style="margin:32px 0;">
+    <div id="form-container">
+    </div>
   </div>
 
   <div class="w3-container" id="more-houses">
@@ -104,14 +119,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
       </div>
     </div>
   </div>
-  <div class="w3-container w3-padding-32 w3-black w3-card" style="margin:32px 0;">
-    <h2>All Reviews</h2>
-    <label>E-mail</label>
-    <div id="reviews-container"></div>
-  </div>
-    <div id="form-container">
-    </div>
-</div>
+
 
 <!-- End page content -->
 </div>
@@ -121,8 +129,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
   <script src="src/review.js"></script>
   <script src="src/houseService.js"></script>
   <script src="src/reviewService.js"></script>
-  <script src="src/sessions.js"></script>
-  <script src="src/sessionsService.js"></script>
   <script src="index.js"></script>
 
 

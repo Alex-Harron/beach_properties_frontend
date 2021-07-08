@@ -3,7 +3,7 @@ class ReviewService{
         this.endpoint = endpoint
     }
 
-    //1st fetch request : 
+    //2nd fetch request : 
     getReviews(){
         fetch(`${this.endpoint}/reviews`)
         .then(resp => resp.json())
@@ -16,6 +16,7 @@ class ReviewService{
         })
     }
 
+    //3rd fetch request
     createReview(){
         const review = {
             user_id: 1,

@@ -6,10 +6,11 @@ class Review {
     static house3Reviews = document.getElementById("house3-reviews")
     static reviewForm = document.getElementById("form-container")
 
-    constructor({text, house_id, id}){
+    constructor({text, house_id, id, user_id}){
         this.id = id;
         this.house_id = house_id;
         this.text = text;
+        this.user_id = user_id;
 
         this.node = document.createElement('ul')
         this.node.id = `review-${this.id}`
@@ -20,11 +21,18 @@ class Review {
 
     
     reviewHTML(){
+        if (this.user_id === 10){
         this.node.innerHTML += `
-        <li style="margin-left: 40px">${this.text}</li>
+        <li>${this.text}</li>
+        <button id='delete-bttn'class= "w3-black w3-button">Delete</button>
         `
         return this.node;
-
+        }else{
+            this.node.innerHTML += `
+            <li>${this.text}</li>
+            `
+            return this.node;
+        }
     }
     putOnDom1(){
         if(this.house_id === 61)
@@ -51,5 +59,12 @@ class Review {
             <button class="w3-button w3-light-blue w3-padding-large" type="submit">Post Review</button></p>
         <form>
         `
+    }
+
+    handleClick = () => {
+        if (event.target.innerText === 'Delete'){
+            this.node.remove()
+            reviewService.deleteReview(this.id)
+        }
     }
 }

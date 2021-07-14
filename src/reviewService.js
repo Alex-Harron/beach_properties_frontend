@@ -43,4 +43,15 @@ class ReviewService{
             r.putOnDom3()
         })
     }
+
+    deleteReview(id){
+        fetch(`${this.endpoint}/reviews/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(resp => resp.json)
+        .then(json => alert("Review has Been Deleted"))
+    }
 }

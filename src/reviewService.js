@@ -44,6 +44,7 @@ class ReviewService{
         })
     }
 
+    //4th fetch request
     deleteReview(id){
         fetch(`${this.endpoint}/reviews/${id}`, {
             method: 'DELETE',

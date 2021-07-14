@@ -27,24 +27,24 @@ class Review {
 
     }
     putOnDom1(){
-        if(this.house_id === 16)
+        if(this.house_id === 61)
         Review.house1Reviews.append(this.reviewHTML())
     }
 
     putOnDom2(){
-        if(this.house_id === 17)
+        if(this.house_id === 62)
         Review.house2Reviews.append(this.reviewHTML())
     }
 
     putOnDom3(){
-        if(this.house_id === 18)
+        if(this.house_id === 63)
         Review.house3Reviews.append(this.reviewHTML())
     }
 
     static renderForm(){
         Review.reviewForm.innerHTML += `
-        <h3> Write a Review: </h3>
-        <form id="new-review-form">
+        <h3 id="new-review-form"> Write a Review: </h3>
+        <form >
             House_id: <input class="w3-input w3-padding-16 w3-border" type="integer" placeholder="house_id" id="house_id" required>
             Text: <input class="w3-input w3-padding-16 w3-border" input type="text" placeholder="Your Review" id="text" required>
             <br>

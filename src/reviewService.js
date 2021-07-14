@@ -21,7 +21,7 @@ class ReviewService{
     //3rd fetch request
     createReview(){
         const review = {
-            user_id: 1,
+            user_id: 10,
             house_id: document.getElementById('house_id').value,
             text: document.getElementById('text').value
         }

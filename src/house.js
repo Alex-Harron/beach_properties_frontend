@@ -27,7 +27,11 @@ class House {
                 <h6 class="w3-opacity">From $99</h6>
                 <p>${this.description}</p>
                 <a href="#new-review-form" class="w3-button w3-block w3-black w3-margin-bottom">Review this House</a>
+                <div class="w3-container w3-padding-12 w3-black w3-card" style="margin:32px 0;">
+                </div>
                 <h3>${this.name} Reviews: </h3>
+                <div class="w3-container w3-padding-12 w3-black w3-card" style="margin:32px 0;">
+                </div>
         `
         return this.element
     }

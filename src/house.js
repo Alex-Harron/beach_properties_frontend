@@ -36,17 +36,17 @@ class House {
         return this.element
     }
     onDom1(){
-        if(this.id === 61){
+        if(this.id === 7){
         House.house1Container.append(this.houseHTML())
         }
     }
     onDom2(){
-        if(this.id === 62){
+        if(this.id === 8){
         House.house2Container.append(this.houseHTML())
         }
     }
     onDom3(){
-        if(this.id === 63){
+        if(this.id === 9){
         House.house3Container.append(this.houseHTML())
         }
     }

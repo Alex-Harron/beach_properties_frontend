@@ -21,7 +21,7 @@ class Review {
 
     
     reviewHTML(){
-        if (this.user_id === 10){
+        if (this.user_id === 2){
         this.node.innerHTML += `
         <li>${this.text}</li>
         <button id='delete-bttn'class= "w3-black w3-button">Delete</button>
@@ -35,17 +35,17 @@ class Review {
         }
     }
     putOnDom1(){
-        if(this.house_id === 61)
+        if(this.house_id === 7)
         Review.house1Reviews.append(this.reviewHTML())
     }
 
     putOnDom2(){
-        if(this.house_id === 62)
+        if(this.house_id === 8)
         Review.house2Reviews.append(this.reviewHTML())
     }
 
     putOnDom3(){
-        if(this.house_id === 63)
+        if(this.house_id === 9)
         Review.house3Reviews.append(this.reviewHTML())
     }
 

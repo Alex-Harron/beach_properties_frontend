@@ -11,7 +11,6 @@ class House {
         this.name = name;
         this.description = description;
         this.img_url = img_url;
-        this.reviews = []
 
         this.element = document.createElement("p")
         this.element.addEventListener('click', this.handleClick)
@@ -35,6 +34,7 @@ class House {
         `
         return this.element
     }
+
     onDom1(){
         if(this.id === 7){
         House.house1Container.append(this.houseHTML())

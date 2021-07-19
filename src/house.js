@@ -29,8 +29,6 @@ class House {
                 <div class="w3-container w3-padding-12 w3-black w3-card" style="margin:32px 0;">
                 </div>
                 <h3>${this.name} Reviews: </h3>
-                <div class="w3-container w3-padding-12 w3-black w3-card" style="margin:32px 0;">
-                </div>
         `
         return this.element
     }

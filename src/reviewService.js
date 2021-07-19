@@ -8,12 +8,9 @@ class ReviewService{
         fetch(`${this.endpoint}/reviews`)
         .then(resp => resp.json())
         .then(reviews => {
-            //For each review of Reviews array
             for (const review of reviews){
                 const c = new Review(review)
-                c.putOnDom1()
-                c.putOnDom2()
-                c.putOnDom3()
+                c.putOnDom()
             }
         })
     }
@@ -38,9 +35,7 @@ class ReviewService{
         .then(resp => resp.json())
         .then(review => {
             const r = new Review(review)
-            r.putOnDom1()
-            r.putOnDom2()
-            r.putOnDom3()
+            r.putOnDom()
         })
     }
 

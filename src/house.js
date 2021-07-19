@@ -15,7 +15,6 @@ class House {
         this.element = document.createElement("p")
         this.element.addEventListener('click', this.handleClick)
 
-
         House.all.push(this)
     }
 
@@ -29,23 +28,18 @@ class House {
                 <div class="w3-container w3-padding-12 w3-black w3-card" style="margin:32px 0;">
                 </div>
                 <h3>${this.name} Reviews: </h3>
+
         `
         return this.element
     }
 
-    onDom1(){
+    onDom(){
         if(this.id === 7){
-        House.house1Container.append(this.houseHTML())
-        }
-    }
-    onDom2(){
-        if(this.id === 8){
-        House.house2Container.append(this.houseHTML())
-        }
-    }
-    onDom3(){
-        if(this.id === 9){
-        House.house3Container.append(this.houseHTML())
+            House.house1Container.append(this.houseHTML())
+        }else if(this.id === 8){
+            House.house2Container.append(this.houseHTML())
+        }else {
+            House.house3Container.append(this.houseHTML())
         }
     }
 

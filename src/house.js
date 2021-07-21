@@ -21,7 +21,7 @@ class House {
     houseHTML(){
         this.element.innerHTML += `
             <img src=${this.img_url} style="width:100%">
-                <h3>Id: ${this.id} - ${this.name}</h3>
+                <h3>${this.name}</h3>
                 <h6 class="w3-opacity">From $99</h6>
                 <p>${this.description}</p>
                 <a href="#new-review-form" class="w3-button w3-block w3-black w3-margin-bottom">Review this House</a>
@@ -34,9 +34,9 @@ class House {
     }
 
     onDom(){
-        if(this.id === 7){
+        if(this.id === 61){
             House.house1Container.append(this.houseHTML())
-        }else if(this.id === 8){
+        }else if(this.id === 62){
             House.house2Container.append(this.houseHTML())
         }else {
             House.house3Container.append(this.houseHTML())
@@ -46,6 +46,7 @@ class House {
     handleClick = (e) => {
         if (e.target.innerText === 'Review this House'){
             Review.renderForm()
+            document.getElementById('house_id').value = `${this.id}`
         }
     }
 }

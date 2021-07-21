@@ -21,7 +21,7 @@ class Review {
 
     
     reviewHTML(){
-        if (this.user_id === 2){
+        if (this.user_id === 10){
         this.node.innerHTML += `
         <li>${this.text}</li>
         <br>
@@ -40,9 +40,9 @@ class Review {
         }
     }
     putOnDom(){
-        if(this.house_id === 7){
+        if(this.house_id === 61){
             Review.house1Reviews.append(this.reviewHTML())
-        }else if(this.house_id === 8){
+        }else if(this.house_id === 62){
             Review.house2Reviews.append(this.reviewHTML())
         }else {
             Review.house3Reviews.append(this.reviewHTML())
@@ -53,7 +53,7 @@ class Review {
         Review.reviewForm.innerHTML += `
         <h3 id="new-review-form"> Write a Review: </h3>
         <form >
-            House Id: <input class="w3-input w3-padding-16 w3-border" type="integer" placeholder="House id:" id="house_id" required>
+            <input class="w3-input w3-padding-16 w3-border" type="hidden" placeholder="House id:" id="house_id" >
             Text: <input class="w3-input w3-padding-16 w3-border" input type="text" placeholder="Your Review:" id="text" required>
             <br><br>
             <button class="w3-button w3-light-blue w3-padding-large" type="submit">Post Review</button></p>

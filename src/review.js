@@ -51,13 +51,13 @@ class Review {
 
     static renderForm(){
         Review.reviewForm.innerHTML += `
+        <form>
         <h3 id="new-review-form"> Write a Review: </h3>
-        <form >
             <input class="w3-input w3-padding-16 w3-border" type="hidden" placeholder="House id:" id="house_id" >
             Text: <input class="w3-input w3-padding-16 w3-border" input type="text" placeholder="Your Review:" id="text" required>
             <br><br>
             <button class="w3-button w3-light-blue w3-padding-large" type="submit">Post Review</button></p>
-        <form>
+        </form>
         `
     }
 

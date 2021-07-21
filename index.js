@@ -13,7 +13,7 @@ Review.reviewForm.addEventListener('submit', handleSubmit)
 function handleSubmit(e){
     e.preventDefault()
     reviewService.createReview()
-    e.target.reset()
+    e.target.remove()
 }
 
 

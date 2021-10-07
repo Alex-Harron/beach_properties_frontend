@@ -5,7 +5,7 @@ class ReviewService{
 
     //2nd fetch request : 
     getReviews(){
-        fetch(`${this.endpoint}/reviews`)
+        fetch('https://beach-properties-api.herokuapp.com/reviews')
         .then(resp => resp.json())
         .then(reviews => {
             for (const review of reviews){
@@ -18,7 +18,7 @@ class ReviewService{
     //3rd fetch request
     createReview(){
         const review = {
-            user_id: 10,
+            user_id: 2,
             house_id: document.getElementById('house_id').value,
             text: document.getElementById('text').value
         }
@@ -31,7 +31,7 @@ class ReviewService{
             body: JSON.stringify(review)
         }
 
-        fetch(`${this.endpoint}/reviews`, configObj)
+        fetch('https://beach-properties-api.herokuapp.com/reviews', configObj)
         .then(resp => resp.json())
         .then(review => {
             const r = new Review(review)
@@ -41,7 +41,7 @@ class ReviewService{
 
     //4th fetch request
     deleteReview(id){
-        fetch(`${this.endpoint}/reviews/${id}`, {
+        fetch(`https://beach-properties-api.herokuapp.com/reviews/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

@@ -12,7 +12,7 @@ class House {
         this.description = description;
         this.img_url = img_url;
 
-        this.element = document.createElement("p")
+        this.element = document.createElement("ul")
         this.element.addEventListener('click', this.handleClick)
 
         House.all.push(this)

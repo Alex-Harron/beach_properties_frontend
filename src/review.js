@@ -21,7 +21,7 @@ class Review {
 
     
     reviewHTML(){
-        if (this.user_id === 1){
+        if (this.user_id === 2){
         this.node.innerHTML += `
         <li>${this.text}</li>
         <br>

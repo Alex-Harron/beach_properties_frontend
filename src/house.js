@@ -34,9 +34,9 @@ class House {
     }
 
     onDom(){
-        if(this.id === 61){
+        if(this.id === 1){
             House.house1Container.append(this.houseHTML())
-        }else if(this.id === 62){
+        }else if(this.id === 2){
             House.house2Container.append(this.houseHTML())
         }else {
             House.house3Container.append(this.houseHTML())

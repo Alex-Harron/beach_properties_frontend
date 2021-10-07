@@ -1,4 +1,4 @@
-const base_url = "http://localhost:3000"
+const base_url = "https://beach-properties-api.herokuapp.com"
 const reviewService = new ReviewService(base_url)
 const houseService = new HouseService(base_url)
 

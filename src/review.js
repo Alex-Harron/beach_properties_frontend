@@ -21,7 +21,7 @@ class Review {
 
     
     reviewHTML(){
-        if (this.user_id === 10){
+        if (this.user_id === 1){
         this.node.innerHTML += `
         <li>${this.text}</li>
         <br>
@@ -40,9 +40,9 @@ class Review {
         }
     }
     putOnDom(){
-        if(this.house_id === 61){
+        if(this.house_id === 1){
             Review.house1Reviews.append(this.reviewHTML())
-        }else if(this.house_id === 62){
+        }else if(this.house_id === 2){
             Review.house2Reviews.append(this.reviewHTML())
         }else {
             Review.house3Reviews.append(this.reviewHTML())

@@ -32,8 +32,8 @@ class Review {
         return this.node;
         }else{
             this.node.innerHTML += `
-            <li>${this.text}</li>
-            <div class="w3-container w3-padding-12 w3-black w3-card" style="margin:32px 0;">
+            <li style='margin:50px'>${this.text}</li>
+            <div style="margin:32px 0;">
             </div>
             `
             return this.node;

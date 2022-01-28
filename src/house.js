@@ -20,7 +20,7 @@ class House {
 
     houseHTML(){
         this.element.innerHTML += `
-            <img src=${this.img_url} style="width:100%">
+            <img src=${this.img_url} style="width:100%; height: 300px">
                 <h3>${this.name}</h3>
                 <h6 class="w3-opacity">From $99</h6>
                 <p>${this.description}</p>

@@ -23,11 +23,8 @@ class Review {
     reviewHTML(){
         if (this.user_id === 2){
         this.node.innerHTML += `
-        <li>${this.text}</li>
-        <br>
-        <button id='delete-bttn'class= "w3-black ">Delete</button>
-        <div class="w3-container w3-padding-12 w3-black w3-card" style="margin:32px 0;">
-        </div>
+        <li style='margin:50px'>${this.text}</li>
+        <button id='delete-bttn' style='margin:50px' class="w3-red">Delete</button>
         `
         return this.node;
         }else{

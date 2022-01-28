@@ -5,6 +5,8 @@ class House {
     static house1Container = document.getElementById("house1-container")
     static house2Container = document.getElementById("house2-container")
     static house3Container = document.getElementById("house3-container")
+    static reviewForm = document.getElementById("form-container")
+
 
     constructor({id, name, description, img_url}) {
         this.id = id;
@@ -21,14 +23,15 @@ class House {
     houseHTML(){
         this.element.innerHTML += `
         <img src=${this.img_url} style="width:100%; height:300px">
-        <div class="w3-container w3-white">
+            <div class="w3-container w3-white">
                 <h3>${this.name}</h3>
                 <h6 class="w3-opacity">From $99</h6>
                 <p>${this.description}</p>
                 <br/>
                 <a href="#new-review-form" class="w3-button w3-block w3-black w3-margin-bottom">Review this House</a>
-                <button  class="w3-button w3-block w3-light-blue w3-margin-bottom">See Other Reviews</button>
-        </div>
+                <div class="w3-container w3-padding-12 w3-black w3-card" style="margin:32px 0;"></div>
+                </div>
+                <h3 style='text-align:center'>${this.name} Reviews:</h3>
         `
         return this.element
     }

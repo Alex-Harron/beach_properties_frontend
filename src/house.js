@@ -20,16 +20,15 @@ class House {
 
     houseHTML(){
         this.element.innerHTML += `
-            <img src=${this.img_url} style="width:100%; height: 300px">
+        <img src=${this.img_url} style="width:100%; height:300px">
+        <div class="w3-container w3-white">
                 <h3>${this.name}</h3>
                 <h6 class="w3-opacity">From $99</h6>
                 <p>${this.description}</p>
                 <br/>
                 <a href="#new-review-form" class="w3-button w3-block w3-black w3-margin-bottom">Review this House</a>
-                <button  class="w3-button w3-block w3-light-blue w3-margin-bottom">Delete</button>
-                <div class="w3-container w3-padding-12 w3-black w3-card" style="margin:32px 0;"></div>
-                <h3>${this.name} Reviews: </h3>
-
+                <button  class="w3-button w3-block w3-light-blue w3-margin-bottom">See Other Reviews</button>
+        </div>
         `
         return this.element
     }
